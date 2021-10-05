@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:padding="10dp"
+    tools:context=".VisitClass_Report_Activity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinevisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/reportcardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="3sp"
+        android:padding="10dp"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imgStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_supervisor_account_black_24dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvStudentcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@+id/imgStudent"
+                tools:text="30"
+                app:layout_constraintBottom_toBottomOf="@id/imgStudent"
+                app:layout_constraintTop_toTopOf="@id/imgStudent"/>
+
+            <ImageView
+                android:id="@+id/imgnext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rippleColor="?attr/colorControlHighlight"
+                android:clickable="true"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvStudentcount"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <ImageView
+        android:id="@+id/imgTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_event_note_black_24dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reportcardView" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTestAssigned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="7dp"
+        app:layout_constraintStart_toEndOf="@+id/imgTest"
+        tools:text="@string/tvTestassigned"
+
+        app:layout_constraintTop_toBottomOf="@+id/reportcardView"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAssigned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="7dp"
+        tools:text="3"
+        app:layout_constraintStart_toEndOf="@+id/tvTestAssigned"
+        app:layout_constraintTop_toBottomOf="@+id/reportcardView"/>
+
+    <ImageView
+        android:id="@+id/imgTestTaken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="90dp"
+        android:src="@drawable/ic_assignment_turned_in_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guidelinevisit"
+        app:layout_constraintStart_toEndOf="@+id/guidelinevisit"
+        app:layout_constraintTop_toBottomOf="@+id/reportcardView" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTakenTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/imgTestTaken"
+        tools:text="@string/tvTestTaken"
+        app:layout_constraintTop_toBottomOf="@+id/reportcardView"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTaken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="5dp"
+        tools:text="230"
+        app:layout_constraintStart_toEndOf="@+id/tvTakenTest"
+        app:layout_constraintTop_toBottomOf="@+id/reportcardView"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/selectdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/imgTestTaken"
+        >
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorLigthblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectdata">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/tvDate"
+            android:textColor="@color/colorBlack"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/testname"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:text="@string/tvtestName"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelinevisit"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintRight_toRightOf="@id/guidelinevisit"
+            app:layout_constraintStart_toEndOf="@+id/tvDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvstudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/tvStudents"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/guidelinevisit"
+            app:layout_constraintStart_toEndOf="@+id/testname"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/clayout"
+        tools:listitem="@layout/visit_report_layout"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineclass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        app:cardCornerRadius="5dp"
+       >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="10 A     " />
+
+            <ImageView
+                android:id="@+id/imgStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintLeft_toRightOf="@id/guidelineclass"
+
+                android:src="@drawable/ic_supervisor_account_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvStudentcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/imgStudent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="30" />
+
+            <ImageView
+                android:id="@+id/imgTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_event_note_black_24dp"
+                app:layout_constraintHorizontal_chainStyle="spread"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvClass" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTestAssigned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/imgTest"
+                app:layout_constraintTop_toBottomOf="@+id/tvClass"
+                tools:text="@string/tvTestassigned" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAssigned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/tvTestAssigned"
+                app:layout_constraintTop_toBottomOf="@+id/tvClass"
+                tools:text="3" />
+
+            <ImageView
+                android:id="@+id/imgTestTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_assignment_turned_in_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/guidelineclass"
+                app:layout_constraintStart_toEndOf="@+id/tvAssigned"
+                app:layout_constraintTop_toBottomOf="@+id/tvClass" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTakenTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/imgTestTaken"
+                app:layout_constraintTop_toBottomOf="@+id/tvClass"
+                tools:text="@string/tvTestTaken" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/tvTakenTest"
+                app:layout_constraintTop_toBottomOf="@+id/tvClass"
+                tools:text="230" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tvline"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaken" />
+
+            <ImageView
+                android:id="@+id/imgRecentTestTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_people_black_24dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/tvline" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvRecentTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imgRecentTestTaken"
+                app:layout_constraintTop_toBottomOf="@+id/tvline"
+                tools:text="@string/tvrecent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvRecentTTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:paddingBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgRecentTestTaken"
+                tools:text="Science(2), Maths(10)" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

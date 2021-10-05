@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:padding="10dp"
+    tools:context=".Test_Details_Activity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinetest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvtestDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+
+        tools:text="10 Jan 21"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvtestName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+        app:layout_constraintTop_toBottomOf="@+id/tvtestDate"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Example of Test Name"
+
+        />
+    <ImageView
+        android:id="@+id/imgshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_visibility_black_24dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        app:rippleColor="?attr/colorControlHighlight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtestDate"
+        />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/testcardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@+id/tvtestName"
+        android:layout_marginTop="15dp"
+        android:padding="15dp"
+        app:cardCornerRadius="5dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+            <ImageView
+                android:id="@+id/imgStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_supervisor_account_black_24dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvStudentTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/imgStudent"
+                app:layout_constraintStart_toEndOf="@+id/imgStudent"
+                tools:text="@string/tvStudentTaken"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="100/150" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAvgScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="35dp"
+                android:text="@string/tvAvgScore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStudentTaken"
+
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvpercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvScore"
+
+                android:text="63%" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/samplelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorLigthblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/testcardView">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvstudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/tvstudentName"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="32dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintLeft_toRightOf="@id/guidelinetest"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8"
+            tools:text="@string/tvScore" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTestList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:listitem="@layout/test_report_layout"
+        app:layout_constraintTop_toBottomOf="@+id/samplelayout"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
