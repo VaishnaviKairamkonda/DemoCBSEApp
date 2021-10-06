@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:background="@color/colorGray"
     tools:context=".MainActivity">
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
-        tools:listitem="@layout/class_report_layout"
-        />
+        tools:listitem="@layout/class_report_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

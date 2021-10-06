@@ -28,16 +28,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
-
-
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvClass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:textSize="18sp"
                 android:textStyle="bold"
-
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="10 A     " />
@@ -46,8 +43,7 @@
                 android:id="@+id/imgStudent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
+                android:layout_marginEnd="30dp"
                 app:layout_constraintLeft_toRightOf="@id/guidelineclass"
 
                 android:src="@drawable/ic_supervisor_account_black_24dp"
@@ -61,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="7dp"
-                android:layout_marginTop="12dp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imgStudent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="30" />
@@ -93,16 +89,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="7dp"
                 android:layout_marginTop="12dp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/tvTestAssigned"
                 app:layout_constraintTop_toBottomOf="@+id/tvClass"
-                tools:text="3" />
+                tools:text="10" />
 
             <ImageView
                 android:id="@+id/imgTestTaken"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="30dp"
+                app:layout_constraintHorizontal_chainStyle="spread"
                 android:src="@drawable/ic_assignment_turned_in_black_24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/guidelineclass"
@@ -113,7 +111,7 @@
                 android:id="@+id/tvTakenTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toEndOf="@+id/imgTestTaken"
                 app:layout_constraintTop_toBottomOf="@+id/tvClass"
@@ -123,20 +121,20 @@
                 android:id="@+id/tvTaken"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toEndOf="@+id/tvTakenTest"
                 app:layout_constraintTop_toBottomOf="@+id/tvClass"
                 tools:text="230" />
-
-            <com.google.android.material.textview.MaterialTextView
+            <View
                 android:id="@+id/tvline"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/tvline"
-                app:layout_constraintTop_toBottomOf="@+id/tvTaken" />
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaken"/>
+
 
             <ImageView
                 android:id="@+id/imgRecentTestTaken"
@@ -164,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-
+                android:textStyle="bold"
                 android:paddingBottom="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgRecentTestTaken"
