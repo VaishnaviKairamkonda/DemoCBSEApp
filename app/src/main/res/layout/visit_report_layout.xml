@@ -5,12 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="5dp">
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
@@ -41,20 +35,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:textStyle="bold"
+                android:maxLines="2"
+
                 app:layout_constraintStart_toEndOf="@+id/tvDate"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Example for Test Name" />
+                tools:text="Example for Test Name " />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvstudentscount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="parent "
                 android:textStyle="bold"
-                app:layout_constraintLeft_toRightOf="@id/guideline"
                 app:layout_constraintStart_toEndOf="@+id/tvTestName"
                 app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintBottom_toBottomOf="parent"
                 tools:text="10" />
 
             <ImageView
@@ -65,7 +62,6 @@
                 android:clickable="true"
                 android:src="@drawable/ic_chevron_right_black_24dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/guideline"
 
                 app:layout_constraintStart_toEndOf="@+id/tvstudentscount"
                 app:layout_constraintTop_toTopOf="parent"

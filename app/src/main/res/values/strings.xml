@@ -5,12 +5,11 @@
     <string name="tvStudentTaken">Student Taken Test</string>
     <string name="tvstudentName">StudentName</string>
     <string name="tvScore">Score</string>
-    <string name="tvDate">Date</string>
+    <string name="tvDate">Date    </string>
     <string name="tvtestName">Test Name</string>
     <string name="tvStudents">Students</string>
     <string name="tvTestTaken">Test Taken:</string>
     <string name="tvrecent">Recent Test Taken</string>
     <string name="tvTestassigned">Test Assigned:</string>
 
-    <string name="tvline">----------------------------------------------------------------------------------</string>
 </resources>

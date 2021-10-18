@@ -80,7 +80,7 @@
         android:layout_marginTop="22dp"
         android:layout_marginStart="7dp"
         app:layout_constraintStart_toEndOf="@+id/imgTest"
-        tools:text="@string/tvTestassigned"
+        android:text="@string/tvTestassigned"
 
         app:layout_constraintTop_toBottomOf="@+id/reportcardView"/>
     <com.google.android.material.textview.MaterialTextView
@@ -114,7 +114,7 @@
         android:layout_marginTop="22dp"
         android:layout_marginStart="5dp"
         app:layout_constraintStart_toEndOf="@+id/imgTestTaken"
-        tools:text="@string/tvTestTaken"
+        android:text="@string/tvTestTaken"
         app:layout_constraintTop_toBottomOf="@+id/reportcardView"/>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTaken"
@@ -142,25 +142,31 @@
             android:background="@color/colorWhite"
             />
     </com.google.android.material.textfield.TextInputLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:layout_marginTop="10dp"
         android:background="@color/colorLigthblue"
+        android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selectdata">
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvDate"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/tvDate"
             android:textColor="@color/colorBlack"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
-            app:layout_constraintTop_toTopOf="parent"
+
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/testname"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            android:textSize="18sp" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/tvDate" />
 
 
         <com.google.android.material.textview.MaterialTextView
@@ -169,32 +175,28 @@
             android:layout_width="wrap_content"
 
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
             android:text="@string/tvtestName"
             android:textColor="@color/colorBlack"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/guidelinevisit"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintRight_toRightOf="@id/guidelinevisit"
+            app:layout_constraintEnd_toStartOf="@+id/tvstudent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tvDate"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvstudent"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
             android:text="@string/tvStudents"
             android:textColor="@color/colorBlack"
+
             android:textSize="18sp"
-
-            app:layout_constraintTop_toTopOf="parent"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
 
-            app:layout_constraintLeft_toRightOf="@id/guidelinevisit"
             app:layout_constraintStart_toEndOf="@+id/testname"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

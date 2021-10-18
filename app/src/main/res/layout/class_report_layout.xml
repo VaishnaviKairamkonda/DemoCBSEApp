@@ -44,7 +44,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="30dp"
-                app:layout_constraintLeft_toRightOf="@id/guidelineclass"
 
                 android:src="@drawable/ic_supervisor_account_black_24dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +80,7 @@
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toEndOf="@+id/imgTest"
                 app:layout_constraintTop_toBottomOf="@+id/tvClass"
-                tools:text="@string/tvTestassigned" />
+                android:text="@string/tvTestassigned" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvAssigned"
@@ -103,7 +102,6 @@
                 app:layout_constraintHorizontal_chainStyle="spread"
                 android:src="@drawable/ic_assignment_turned_in_black_24dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/guidelineclass"
                 app:layout_constraintStart_toEndOf="@+id/tvAssigned"
                 app:layout_constraintTop_toBottomOf="@+id/tvClass" />
 
@@ -115,7 +113,7 @@
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toEndOf="@+id/imgTestTaken"
                 app:layout_constraintTop_toBottomOf="@+id/tvClass"
-                tools:text="@string/tvTestTaken" />
+                android:text="@string/tvTestTaken" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvTaken"
@@ -155,7 +153,7 @@
                 android:layout_marginTop="20dp"
                 app:layout_constraintStart_toEndOf="@+id/imgRecentTestTaken"
                 app:layout_constraintTop_toBottomOf="@+id/tvline"
-                tools:text="@string/tvrecent" />
+                android:text="@string/tvrecent" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvRecentTTaken"
